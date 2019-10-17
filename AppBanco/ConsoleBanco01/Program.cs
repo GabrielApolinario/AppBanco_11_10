@@ -8,7 +8,7 @@ namespace ConsoleBanco01
     {
         static void Main(string[] args)
         {
-            var Banco = new Banco();
+            //var Banco = new Banco();
             var UsuarioDAO = new UsuarioDAO();
             var usuario = new Usuario();
 
@@ -23,14 +23,24 @@ namespace ConsoleBanco01
             //Console.WriteLine("Digite a Data de nascimento do usuário");
             //usuario.DataNasc = DateTime.Parse(Console.ReadLine());
 
-            Console.WriteLine("Digite o ID do usuário");
-            usuario.IdUsu = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Digite o ID do usuário");
+            //usuario.IdUsu = Convert.ToInt32(Console.ReadLine());
 
             UsuarioDAO.Excluir(usuario);
             
             //Chamando o método Salvar
             //UsuarioDAO.Salvar(usuario);
-            UsuarioDAO.Listar();
+
+
+            var leitor = UsuarioDAO.Listar();
+
+            foreach (var usuarios in leitor)
+            {
+                Console.WriteLine("Id: {0}, Nome: {1}, Cargo: {2}, Data: {3}", usuarios.IdUsu,
+                usuarios.NomeUsu, usuarios.Cargo, usuarios.DataNasc);
+
+            };
+            Console.ReadLine();
 
             //SqlDataReader leitor = UsuarioDAO.Listar();
 
@@ -43,7 +53,7 @@ namespace ConsoleBanco01
 
             //};
 
-            Console.ReadLine();
+           
 
 
             /*Data Source é o SGBD em que está se conectando

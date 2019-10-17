@@ -42,14 +42,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleBanco01.exe" size="9664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AppBancoADO.dll" size="5120">
+      <assemblyIdentity name="AppBancoADO" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9MGa4pShHAHKoP8BPy7yAqMrAA8LCc1VKnJw+tpLeR4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AppBancoDLL.dll" size="6144">
+      <assemblyIdentity name="AppBancoDLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>mwW5U008dKMCserfc4+oQKnov0jCV25P0PN8ZqgW5pc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AppBancoDominio.dll" size="5120">
+      <assemblyIdentity name="AppBancoDominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5y8ixmm02Tmpv+1eGea3yEvIWYD9lnwqbfCpxIB4/KA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleBanco01.exe" size="7104">
       <assemblyIdentity name="ConsoleBanco01" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/8sjDjVnXsCIfzVYw+OmPrs1++OMYaXyxSzCUBvJ1cw=</dsig:DigestValue>
+        <dsig:DigestValue>v3hOrnFQLH1z8JH1e8Kn7aYrI+6kw9ACnNYNM+0aVJU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

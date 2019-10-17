@@ -31,3 +31,10 @@ C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\obj\Debug\C
 C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\obj\Debug\ConsoleBanco01.application
 C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\obj\Debug\ConsoleBanco01.exe
 C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\obj\Debug\ConsoleBanco01.pdb
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\bin\Debug\AppBancoDLL.dll
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\bin\Debug\AppBancoDominio.dll
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\bin\Debug\AppBancoADO.dll
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\bin\Debug\AppBancoDLL.pdb
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\bin\Debug\AppBancoDominio.pdb
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\bin\Debug\AppBancoADO.pdb
+C:\Users\2binfo\Documents\Gabriel Ap\ASP.NET\AppBanco\ConsoleBanco01\obj\Debug\ConsoleBanco01.csproj.CopyComplete
