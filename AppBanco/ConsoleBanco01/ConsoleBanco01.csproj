@@ -102,6 +102,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AppBancoADO\AppBancoADO.csproj">
+      <Project>{ad4c467a-6ad5-49c3-ac23-1a55b9506566}</Project>
+      <Name>AppBancoADO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AppBancoDLL\AppBancoDLL.csproj">
       <Project>{2fa95e85-1726-4f06-968a-3af2ea21e764}</Project>
       <Name>AppBancoDLL</Name>

@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleBanco01.exe" size="7104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleBanco01.exe" size="6592">
       <assemblyIdentity name="ConsoleBanco01" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v3hOrnFQLH1z8JH1e8Kn7aYrI+6kw9ACnNYNM+0aVJU=</dsig:DigestValue>
+        <dsig:DigestValue>ErsFFhNmIyvIVOAucVtMNuYgiVtzUcwS+H8QxrYH5jE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

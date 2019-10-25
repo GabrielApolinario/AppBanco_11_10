@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace ConsoleBanco01
+namespace AppBancoDLL
 {
     public class Banco : IDisposable
     {

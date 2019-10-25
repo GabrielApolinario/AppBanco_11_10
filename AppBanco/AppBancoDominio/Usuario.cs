@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Adicionar referencia dessa anotação para que ela possa ser usada aqui
 //using System.ComponentModel.DataAnnotations;
 
-namespace ConsoleBanco01
+namespace AppBancoDominio
 {
     public class Usuario
     {
@@ -14,11 +14,11 @@ namespace ConsoleBanco01
         //Estrutura basica para montar os atributos
         public int MyProperty { get; set; }
 
-  //      [Required]
+        //[Required]
         public int IdUsu { get; set; }
 
-    //    [Required]
-      //  [MaxLength(50)]
+       //[Required]
+       //[MaxLength(50)]
         public string NomeUsu { get; set; }
 
         //[Required]

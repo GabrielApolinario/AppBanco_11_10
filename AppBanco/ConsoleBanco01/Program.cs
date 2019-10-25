@@ -1,17 +1,77 @@
-﻿using System;
+﻿using AppBancoDominio;
+using System;
 using System.Data.SqlClient;
 
 
-namespace ConsoleBanco01
+namespace AppBancoDLL
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //var Banco = new Banco();
-            var UsuarioDAO = new UsuarioDAO();
+
+            var Banco = new Banco();
+            var usuarioDAO = new UsuarioDAO();
             var usuario = new Usuario();
 
+            while (true)
+            {
+                Console.Clear();
+                usuarioDAO.Menu();
+                string opcao = Console.ReadLine();
+
+                switch (opcao)
+                {
+                    case "0":
+                        usuario = usuarioDAO.DadosUsuario(usuario);
+                        usuarioDAO.Insert(usuario);
+                        break;
+
+                    case "1":
+                        usuario = usuarioDAO.DadosUsuario(usuario);
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Digite a 'identificação', o ID do usuário");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        usuario.IdUsu = int.Parse(Console.ReadLine());
+                        usuarioDAO.Atualizar(usuario);
+
+                        break;
+                    case "2":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Digite a 'identificação', o ID do usuário");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        usuario.IdUsu = int.Parse(Console.ReadLine());
+                        usuarioDAO.Excluir(usuario);
+
+                        break;
+
+                    case "4":
+                        Environment.Exit(0);
+                        break;
+                }
+
+                Console.ForegroundColor = ConsoleColor.Blue;
+
+                if (opcao == "0" || opcao == "1" || opcao == "2" || opcao == "3")
+                {
+                    var dao = new UsuarioDAO();
+                    var leitor = dao.Listar();
+
+                    foreach (var usuarios in leitor)
+                    {
+                        Console.WriteLine("Id: {0}, Nome: {1}, Cargo: {2}, Data: {3}", usuarios.IdUsu,
+                        usuarios.NomeUsu, usuarios.Cargo, usuarios.DataNasc);
+                    };
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Pressione o enter e escolha uma das opções: 0, 1, 2, 3 ou 4");
+                }
+
+                Console.ReadLine();
+
+            }
 
             //Podemos passar os atributos da classe diretamente para receber o readline
             //Console.WriteLine("Digite o Nome do usuário");
@@ -26,21 +86,21 @@ namespace ConsoleBanco01
             //Console.WriteLine("Digite o ID do usuário");
             //usuario.IdUsu = Convert.ToInt32(Console.ReadLine());
 
-            UsuarioDAO.Excluir(usuario);
-            
+            //UsuarioDAO.Excluir(usuario);
+
             //Chamando o método Salvar
             //UsuarioDAO.Salvar(usuario);
 
 
-            var leitor = UsuarioDAO.Listar();
+            //var leitor = UsuarioDAO.Listar();
 
-            foreach (var usuarios in leitor)
-            {
-                Console.WriteLine("Id: {0}, Nome: {1}, Cargo: {2}, Data: {3}", usuarios.IdUsu,
-                usuarios.NomeUsu, usuarios.Cargo, usuarios.DataNasc);
+            //foreach (var usuarios in leitor)
+            //{
+            //    Console.WriteLine("Id: {0}, Nome: {1}, Cargo: {2}, Data: {3}", usuarios.IdUsu,
+            //    usuarios.NomeUsu, usuarios.Cargo, usuarios.DataNasc);
 
-            };
-            Console.ReadLine();
+            //};
+            //Console.ReadLine();
 
             //SqlDataReader leitor = UsuarioDAO.Listar();
 

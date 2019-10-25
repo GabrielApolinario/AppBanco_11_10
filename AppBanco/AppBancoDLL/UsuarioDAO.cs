@@ -1,18 +1,49 @@
-﻿using System;
+﻿using AppBancoDominio;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleBanco01
+namespace AppBancoDLL
 {
     public class UsuarioDAO
     {
         private Banco db;
 
-        
-        //public void Insert(string vNome, string vCargo, string vData)
+        public void Menu()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("===========MENU==========\n" +
+                              " 0 - Cadastrar Usuario\n" +
+                              " 1 - Editar Usuario\n" +
+                              " 2 - Excluir Usuario\n" +
+                              " 3 - Listar Usuarios\n" +
+                              " 4 - Sair \n" +
+                              "=========================\n\n" +
+                              "Escolha uma das opções acima!");
+
+        }
+
+        public Usuario DadosUsuario(Usuario usuario)
+        {
+
+            Console.WriteLine("Digite o nome do usuário");
+            Console.ForegroundColor = ConsoleColor.Red;
+            usuario.NomeUsu = Console.ReadLine();
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Digite o cargo do usuario");
+            Console.ForegroundColor = ConsoleColor.Red;
+            usuario.Cargo = Console.ReadLine();
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Digite a data de nascimento do usuario");
+            Console.ForegroundColor = ConsoleColor.Red;
+            usuario.DataNasc = DateTime.Parse(Console.ReadLine());
+            return usuario;
+        }
 
         public void Insert(Usuario usuario)
         {
