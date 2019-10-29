@@ -128,6 +128,17 @@ namespace AppBancoDLL
             return usuarios;
         }
 
+        //Usar na validação de usuário
+        public Usuario ListarID(int Id)
+        {
+            using (db = new Banco())
+            {
+                var strQuery = string.Format("SELECT * FROM tbUsuario WHERE IdUsu = {0};", Id);
+                var retorno = db.RetornaComando(strQuery);
+                return ListaDeUsuario(retorno).FirstOrDefault();
+            }
+        }
+
 
 
 

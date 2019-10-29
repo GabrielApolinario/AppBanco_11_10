@@ -34,5 +34,31 @@ namespace WebMVC.Controllers
             }
             return View(usuario);
         }
+
+        //Adicionar ideia ao projeto
+        public ActionResult Editar(int Id)
+        {
+            var metodoUsuario = new UsuarioDAO();
+            var usuario = metodoUsuario.ListarID(Id);
+
+            if(usuario == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(usuario);
+        }
+        
+        [HttpPost]
+        public ActionResult Editar(Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodoUsuario = new UsuarioDAO();
+                metodoUsuario.Salvar(usuario);
+            }
+                return RedirectToAction("Index");
+ 
+        }
     }
 }

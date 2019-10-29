@@ -4,46 +4,48 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-<br/>
+<h2 class="text-center">USUÁRIOS</h2>
 
+<br/>
 
 <table class="table">
     <tr>
 
-        <th>
-            <b>ID</b>
-            @*@Html.DisplayNameFor(model => model.IdUsu)*@
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.IdUsu)
         </th>
-        <th>
-            <b>NOME</b>
-            @*@Html.DisplayNameFor(model => model.NomeUsu)*@
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.NomeUsu)
         </th>
-        <th>
-            <b>CARGO</b>
-            @*@Html.DisplayNameFor(model => model.Cargo)*@
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Cargo)
         </th>
-
-        <th>
-            <b>AÇÕES</b>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.DataNasc)
+        </th>
+        <th class="text-center">
+            <b>Ações</b>
         </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
 
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.IdUsu)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.NomeUsu)
         </td>
-        <td>
+        <td class="text-center">
             @Html.DisplayFor(modelItem => item.Cargo)
         </td>
-        <td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.DataNasc)
+        </td>
+        <td class="text-center">
            
-            @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Editar", "Editar", new {id = item.IdUsu }) |
             @Html.ActionLink("Detalhe", "Details", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
@@ -51,3 +53,5 @@
 }
 
 </table>
+
+<p>@Html.ActionLink("Novo usuario", "Cadastrar")</p>
