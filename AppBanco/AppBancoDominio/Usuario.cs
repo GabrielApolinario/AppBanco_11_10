@@ -30,8 +30,8 @@ namespace AppBancoDominio
         public string Cargo { get; set; }
 
         [DisplayName("Data de nascimento")]
-        [Required(ErrorMessage = "Este campo é obrigatório!")]
-        [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString = "{0:dd/mm/yyyy}")]
+        [Required(ErrorMessage = "Este campo é obrigatório!")]         
+        [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataNasc { get; set; }
 
     }

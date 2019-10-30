@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<AppBancoDominio.Usuario>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Usuário";
 }
 
-<h2 class="text-center">USUÁRIOS</h2>
-
+<h2>USUÁRIO</h2>
+<p>@Html.ActionLink("Novo usuário", "Cadastrar")</p>
 <br/>
 
 <table class="table">
@@ -23,8 +23,8 @@
         <th class="text-center">
             @Html.DisplayNameFor(model => model.DataNasc)
         </th>
-        <th class="text-center">
-            <b>Ações</b>
+        <th>
+            @*<b>Ações</b>*@
         </th>
     </tr>
 
@@ -45,13 +45,12 @@
         </td>
         <td class="text-center">
            
-            @Html.ActionLink("Editar", "Editar", new {id = item.IdUsu }) |
-            @Html.ActionLink("Detalhe", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Alterar", "Editar", new {id = item.IdUsu }) |
+            @Html.ActionLink("Detalhes", "Detalhes", new { id = item.IdUsu }) |
+            @Html.ActionLink("Apagar", "Deletar", new { id = item.IdUsu })
         </td>
     </tr>
 }
 
 </table>
 
-<p>@Html.ActionLink("Novo usuario", "Cadastrar")</p>

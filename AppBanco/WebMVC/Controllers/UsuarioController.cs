@@ -60,5 +60,46 @@ namespace WebMVC.Controllers
                 return RedirectToAction("Index");
  
         }
+
+        public ActionResult Detalhes(int Id)
+        {
+            var metodoUsuario = new UsuarioDAO();
+            var usuario = metodoUsuario.ListarID(Id);
+
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(usuario);
+        }
+
+  
+        public ActionResult Deletar(int Id)
+        {
+            var metodoUsuario = new UsuarioDAO();
+            var usuario = metodoUsuario.ListarID(Id);
+            
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+
+           return View(usuario);
+        }
+
+        //A ActionName deve receber o mesmo nome da outra action, neste caso "Deletar"
+        [HttpPost, ActionName("Deletar")]
+        public ActionResult ConfirmaDeletar(int Id)
+        {         
+            var metodoUsuario = new UsuarioDAO();
+            //O metodo inicialmente recebe um Id, porem o método Excluir recebe como parametro um objeto do tipo Usuario
+            //Basta instanciar o objeto e dar a propriedade IdUsu para ele receber o parametro int do metodo 'ConfirmaDeletar'
+            var usuario = new Usuario();
+            usuario.IdUsu = Id;
+            metodoUsuario.Excluir(usuario);
+
+            return RedirectToAction("Index");
+        }
     }
 }
